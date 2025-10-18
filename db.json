@@ -1,0 +1,264 @@
+{
+  "categories": [
+    {
+      "id": "1",
+      "name": "Watch"
+    },
+    {
+      "id": "2",
+      "name": "Fruits"
+    },
+    {
+      "id": "3",
+      "name": "Soft Drinks"
+    },
+    {
+      "id": "4",
+      "name": "Phones"
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "name": "Watch Casio MTP-V002",
+      "price": 850000,
+      "quantity": 12,
+      "categoryId": 1,
+      "image": "https://product.hstatic.net/1000388227/product/mtp-v002l-7b3udf_02ae2effecb543a5bc701c86d798bbec_master.png"
+    },
+    {
+      "id": "2",
+      "name": "Watch Fossil FS5453",
+      "price": 3200000,
+      "quantity": 5,
+      "categoryId": 1,
+      "image": "https://cdn.casio-vietnam.vn/wp-content/uploads/2020/09/MTP-E321RL-2AV.png"
+    },
+    {
+      "id": "3",
+      "name": "Apple Fuji Japan",
+      "price": 95000,
+      "quantity": 40,
+      "categoryId": 2,
+      "image": "https://cdn.abphotos.link/photos/resized/1000x/2023/01/03/1672738109_niRmwzpyUZsaq2o1_1672745887-phpf8313v.png"
+    },
+    {
+      "id": "4",
+      "name": "Cameron Seedless",
+      "price": 65000,
+      "quantity": 30,
+      "categoryId": 2,
+      "image": "https://salt.tikicdn.com/cache/w300/ts/product/86/48/f5/273bd9cd2811743977a7dd00873b9c69.png"
+    },
+    {
+      "id": "5",
+      "name": "Coca-Cola 330ml",
+      "price": 10000,
+      "quantity": 100,
+      "categoryId": 3,
+      "image": "https://csfood.vn/wp-content/uploads/2016/04/Nuoc-Giai-Khat-Coca-Cola-Lon-330ml.jpg"
+    },
+    {
+      "id": "6",
+      "name": "Pepsi 500ml",
+      "price": 12000,
+      "quantity": 80,
+      "categoryId": 3,
+      "image": "https://product.hstatic.net/1000288770/product/nuoc_giai_khat_co_gas_pepsi_loc_6_chai_x_390ml_23fa95d4d0344868846a428158d8d76a.jpg"
+    },
+    {
+      "id": "7",
+      "name": "IPhone 15 Pro Max 256GB",
+      "price": 34990000,
+      "quantity": 10,
+      "categoryId": 4,
+      "image": "https://cdn.tgdd.vn/Products/Images/42/305658/iphone-15-pro-max-blue-thumbnew-600x600.jpg"
+    },
+    {
+      "id": "8",
+      "name": "Samsung Galaxy S24 Ultra",
+      "price": 28990000,
+      "quantity": 8,
+      "categoryId": 4,
+      "image": "https://www.didongmy.com/vnt_upload/product/01_2024/thumbs/(600x600)_samsung_galaxy_s24_ultra_5g_tim_didongmy_thumb_600x600_1_1.jpg"
+    },
+    {
+      "id": "9",
+      "name": "Watch Orient Bambino",
+      "price": 4200000,
+      "quantity": 7,
+      "categoryId": 1,
+      "image": "https://cdn.tgdd.vn/Products/Images/7264/202675/orient-fag00001s0-nam-co-tu-dong-2-600x600.jpg"
+    },
+    {
+      "id": "10",
+      "name": "Watch Seiko 5 SNK809",
+      "price": 2800000,
+      "quantity": 9,
+      "categoryId": 1,
+      "image": "https://product.hstatic.net/1000223154/product/z2983814430281_9cc54db7f595c095d56187afe4b1de50_359610d12e624671b9a457ac170c42ef_grande.jpg"
+    },
+    {
+      "id": "11",
+      "name": "Banana Laba Dalat",
+      "price": 35000,
+      "quantity": 50,
+      "categoryId": 2,
+      "image": "https://dalatfarm.net/wp-content/uploads/2023/09/chuoi-laba-da-lat-3.jpg"
+    },
+    {
+      "id": "12",
+      "name": "Mango Cat Hoa Loc",
+      "price": 55000,
+      "quantity": 35,
+      "categoryId": 2,
+      "image": "https://product.hstatic.net/200000423303/product/xoai-cat-hoa-loc-chin-tui-1kg-1-3-trai-202211171439042124_c3ddfdf7d18f4a11be3d8457ac79d2b2.jpg"
+    },
+    {
+      "id": "13",
+      "name": "7Up 330ml",
+      "price": 9500,
+      "quantity": 90,
+      "categoryId": 3,
+      "image": "https://cdn.tgdd.vn/Products/Images/2443/76446/bhx/nuoc-ngot-7-up-lon-330ml-202312252102017018.jpg"
+    },
+    {
+      "id": "14",
+      "name": "Mirinda Orange 330ml",
+      "price": 9500,
+      "quantity": 85,
+      "categoryId": 3,
+      "image": "https://cdn.tgdd.vn/Products/Images/2443/79137/bhx/thung-24-lon-nuoc-ngot-mirinda-huong-cam-320ml-202312252205214117.jpg"
+    },
+    {
+      "id": "15",
+      "name": "IPhone 14 128GB",
+      "price": 21990000,
+      "quantity": 15,
+      "categoryId": 4,
+      "image": "https://product.hstatic.net/200000845283/product/iphone_14_purple_pdp_image_position-1a_purple_color_vn_42f732a99cf248cf8d273433a255a9ea.jpg"
+    },
+    {
+      "id": "16",
+      "name": "Samsung Galaxy A54",
+      "price": 9990000,
+      "quantity": 20,
+      "categoryId": 4,
+      "image": "https://vuasmartphone.vn/upload/product/452060768843.png"
+    },
+    {
+      "id": "17",
+      "name": "Watch Tissot PRX",
+      "price": 10500000,
+      "quantity": 4,
+      "categoryId": 1,
+      "image": "https://image.donghohaitrieu.com/wp-content/uploads/2023/09/T137.410.11.031.00.jpg"
+    },
+    {
+      "id": "18",
+      "name": "Apple Envy New Zealand",
+      "price": 120000,
+      "quantity": 25,
+      "categoryId": 2,
+      "image": "https://bizweb.dktcdn.net/thumb/1024x1024/100/442/010/products/envy1-2-scaled.jpg?v=1666600913933"
+    },
+    {
+      "id": "19",
+      "name": "Orange Valencia",
+      "price": 45000,
+      "quantity": 40,
+      "categoryId": 2,
+      "image": "https://goce.vn/files/product/bfc11ffbfeb768c94fecf48e5f9de188.jpg"
+    },
+    {
+      "id": "20",
+      "name": "Sting Strawberry 330ml",
+      "price": 9000,
+      "quantity": 70,
+      "categoryId": 3,
+      "image": "https://www.lottemart.vn/media/catalog/product/cache/0x0/8/9/8934588232114-1.jpg.webp"
+    },
+    {
+      "id": "21",
+      "name": "Schweppes Soda 330ml",
+      "price": 10000,
+      "quantity": 60,
+      "categoryId": 3,
+      "image": "https://cdn.tgdd.vn/Products/Images/2443/84440/bhx/soda-schweppes-lon-330ml-202401091732426460.jpg"
+    },
+    {
+      "id": "22",
+      "name": "IPhone 13",
+      "price": 10990000,
+      "quantity": 12,
+      "categoryId": 4,
+      "image": "https://happyphone.vn/wp-content/uploads/2024/07/Iphone-13-128GB-mau-xanh-duong.png"
+    },
+    {
+      "id": "23",
+      "name": "Samsung Galaxy Z Flip5",
+      "price": 24990000,
+      "quantity": 6,
+      "categoryId": 4,
+      "image": "https://www.duchuymobile.com/images/detailed/61/samsung-galaxy-z-flip5-5g.png"
+    },
+    {
+      "id": "24",
+      "name": "Watch Daniel Wellington Classic",
+      "price": 3900000,
+      "quantity": 10,
+      "categoryId": 1,
+      "image": "https://danielwellingtons.com.vn/wp-content/uploads/2019/06/re1.jpg"
+    },
+    {
+      "id": "25",
+      "name": "Mango Keo Campuchia",
+      "price": 30000,
+      "quantity": 45,
+      "categoryId": 2,
+      "image": "https://hoalocrr.com/wp-content/uploads/2023/03/xoai-keo-vang.jpg"
+    }
+  ],
+  "cartItems": [
+    {
+      "id": "6051",
+      "productId": 3,
+      "quantity": 4,
+      "name": "Apple Fuji Japan",
+      "price": 95000,
+      "image": "https://cdn.abphotos.link/photos/resized/1000x/2023/01/03/1672738109_niRmwzpyUZsaq2o1_1672745887-phpf8313v.png"
+    },
+    {
+      "id": "1821",
+      "productId": 2,
+      "quantity": 5,
+      "name": "Watch Fossil FS5453",
+      "price": 3200000,
+      "image": "https://cdn.casio-vietnam.vn/wp-content/uploads/2020/09/MTP-E321RL-2AV.png"
+    },
+    {
+      "id": "5424",
+      "productId": "19",
+      "quantity": 1,
+      "name": "Orange Valencia",
+      "price": 45000,
+      "image": "https://goce.vn/files/product/bfc11ffbfeb768c94fecf48e5f9de188.jpg"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "username": "admin",
+      "email": "admin@gmail.com",
+      "password": "123",
+      "role": "admin"
+    },
+    {
+      "id": "2",
+      "email": "phuc36@gmail.com",
+      "username": "phuc36",
+      "password": "123",
+      "role": "user"
+    }
+  ]
+}

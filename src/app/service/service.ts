@@ -1,30 +1,49 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { APIResposneModel } from '../lib/type';
+import { map, Observable } from 'rxjs';
+import { CartItem, Category, Product, User } from '../lib/type';
 
 @Injectable({
   providedIn: 'root'
 })
 export class Service {
-  apiUrl: string = "https://freeapi.miniprojectideas.com/api/BigBasket/";
+  private apiUrl = 'http://localhost:3000';
 
   constructor(private http: HttpClient) {
   }
 
-  getAllProducts(): Observable<APIResposneModel> {
-    // return this.http.get<APIResposneModel>(this.apiUrl + "GetAllProducts")
-    return this.http.get<APIResposneModel>('/api/BigBasket/GetAllProducts')
+  getAllProducts(): Observable<Product[]> {
+    return this.http.get<Product[]>(`${this.apiUrl}/products`)
   }
 
-  getAllCategory(): Observable<APIResposneModel> {
-    // return this.http.get<APIResposneModel>(this.apiUrl + "GetAllCategory")
-    return this.http.get<APIResposneModel>('/api/BigBasket/GetAllCategory')
+  createProduct(product: Product): Observable<Product> {
+    return this.http.post<Product>(`${this.apiUrl}/products`, product);
   }
 
-  getAllProductByCategoryId(categoryId: number): Observable<APIResposneModel> {
-    // const url = `${this.apiUrl}GetAllProductsByCategoryId?id=${categoryId}`
-    return this.http.get<APIResposneModel>(`/api/BigBasket/GetAllProductsByCategoryId?id=${categoryId}`)
+  getAllCategory(): Observable<Category[]> {
+    return this.http.get<Category[]>(`${this.apiUrl}/categories`)
   }
+
+  getAllProductByCategoryId(categoryId: number): Observable<Product[]> {
+    return this.http.get<Product[]>(`${this.apiUrl}/products?categoryId=${categoryId}`)
+  }
+
+  // Cart Service
+  getCartItems(): Observable<CartItem[]> {
+    return this.http.get<CartItem[]>(`${this.apiUrl}/cartItems`);
+  }
+
+  addToCart(item: Omit<CartItem, 'id'>): Observable<CartItem> {
+    return this.http.post<CartItem>(`${this.apiUrl}/cartItems`, item);
+  }
+
+  updateCartItem(id: number, changes: { quantity: number }): Observable<any> {
+    return this.http.patch(`${this.apiUrl}/cartItems/${id}`, changes);
+  }
+
+  removeCartItem(id: number): Observable<any> {
+    return this.http.delete(`${this.apiUrl}/cartItems/${id}`);
+  }
+
 
 }

@@ -1,26 +1,35 @@
-export interface APIResposneModel {
-    message: string,
-    result: string,
-    data: any
-}
-
 export interface Product {
-    productId: number;
-    productSku: string;
-    productName: string;
-    productPrice: number;
-    productShortName: string;
-    productDescription: string;
-    createdDate: string;
-    deliveryTimeSpan: string;
+    id: number;
+    name: string;
+    price: number;
+    quantity: number;
     categoryId: number;
-    productImageUrl: string;
-    categoryName: string;
+    image: string;
 }
 
 export interface Category {
-    categoryId: number;
-    categoryName: string;
-    parentCategoryId: number;
-    userId?: any;
+    id: number;
+    name: string;
+}
+
+export interface CartItem {
+    id: number;
+    productId: number;
+    name: string;
+    price: number;
+    quantity: number;
+    image: string;
+}
+
+export interface User {
+    id: number;
+    username: string;
+    email: string;
+    password: string;
+    role: string;
+}
+
+export class LoginModel {
+    email: string = '';
+    password: string = '';
 }

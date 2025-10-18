@@ -1,17 +1,26 @@
 <div class="bg-white">
     <div class="grid gap-5 px-4 py-8">
         <div class="text-center">
-            <h2 class="text-2xl font-bold tracking-tight text-gray-900">All Product</h2>
+            <h2 class="text-2xl font-bold tracking-tight text-gray-900">{{ selectedCategoryName }}</h2>
         </div>
         <div class="flex gap-5">
             <div class="flex flex-col w-[15%] p-4 bg-gray-50 rounded-lg shadow-md">
                 <h3 class="text-xl font-bold tracking-tight text-gray-900 mb-4">Category</h3>
-
+                <button (click)="loadAllProducts()" [ngClass]="{
+                    'border-blue-500 text-blue-600': selectedCategoryId !== null,
+                    'border-red-500 text-red-600': selectedCategoryId === null
+                    }"
+                    class="cursor-pointer px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-lg hover:border-blue-500 hover:text-blue-600 hover:shadow transition-all duration-200 mb-2">
+                    All Product
+                </button>
                 <div class="flex gap-2 flex-wrap">
                     @for (category of categoryList | async; track $index) {
-                    <button (click)="getProductByCategory(category.categoryId)"
+                    <button (click)="getProductByCategory(category.id, category.name)" [ngClass]="{
+                        'border-blue-500 text-blue-600': selectedCategoryId !== category.id,
+                        'border-red-500 text-red-600': selectedCategoryId === category.id
+                        }"
                         class="cursor-pointer px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-lg hover:border-blue-500 hover:text-blue-600 hover:shadow transition-all duration-200">
-                        {{ category.categoryName }}
+                        {{ category.name }}
                     </button>
                     }
                 </div>
@@ -42,30 +51,27 @@
                     @for(product of productList(); track $index){
                     <div
                         class="group border-1 rounded-lg border-gray-200 shadow hover:shadow-lg transition duration-300 bg-white h-fit">
-                        <a href="#" class="block overflow-hidden rounded-t-lg ">
-                            <img [src]="product.productImageUrl" [alt]="product.productName"
+                        <a href="#" class="block overflow-hidden rounded-t-lg border-b-gray-100 border-b-1">
+                            <img [src]="product.image" [alt]="product.name"
                                 class="w-full aspect-square object-cover transform group-hover:scale-105 transition duration-300" />
                         </a>
-                        <div class="flex items-center justify-between p-4">
-                            <div>
-                                <h3 class="text-lg font-semibold text-gray-800 group-hover:text-indigo-600 transition">
-                                    {{product.productName}}</h3>
-                                <p class="mt-1 text-lg font-bold text-gray-900">${{product.productPrice }}</p>
+                        <div class="p-4">
+                            <div
+                                class="text-[16px] font-medium text-gray-800 group-hover:text-indigo-600 transition w-full overflow-hidden text-ellipsis whitespace-nowrap">
+                                {{product.name}}
                             </div>
-                            <button
-                                class="cursor-pointer bg-indigo-600 text-white text-sm font-semibold px-4 py-2 rounded-lg shadow hover:bg-indigo-700 hover:scale-105 transition">
-                                Mua
-                            </button>
+                            <div class="flex flex-row items-center justify-between mt-2">
+                                <p class="mt-1 text-lg font-bold text-gray-900">${{product.price | number:'1.0-0' }}</p>
+                                <button (click)="addToCart(product)"
+                                    class="cursor-pointer bg-indigo-600 text-white text-sm font-semibold px-4 py-2 rounded-lg shadow hover:bg-indigo-700 hover:scale-105 transition">
+                                    Buy
+                                </button>
+                            </div>
                         </div>
                     </div>
                     }
                 </div>
             </div>
         </div>
-
-
-
-
-
     </div>
 </div>

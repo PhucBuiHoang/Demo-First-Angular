@@ -1,11 +1,11 @@
 {
     "/api": {
-        "target": "https://freeapi.miniprojectideas.com/api",
+        "target": "https://freeapi.miniprojectideas.com",
         "secure": true,
         "changeOrigin": true,
         "logLevel": "debug",
         "pathRewrite": {
-            "^/api": ""
+            "^/api": "/api/BigBasket"
         }
     }
 }
