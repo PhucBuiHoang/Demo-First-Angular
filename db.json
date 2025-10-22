@@ -19,14 +19,6 @@
   ],
   "products": [
     {
-      "id": "1",
-      "name": "Watch Casio MTP-V002",
-      "price": 850000,
-      "quantity": 12,
-      "categoryId": 1,
-      "image": "https://product.hstatic.net/1000388227/product/mtp-v002l-7b3udf_02ae2effecb543a5bc701c86d798bbec_master.png"
-    },
-    {
       "id": "2",
       "name": "Watch Fossil FS5453",
       "price": 3200000,
@@ -217,32 +209,42 @@
       "quantity": 45,
       "categoryId": 2,
       "image": "https://hoalocrr.com/wp-content/uploads/2023/03/xoai-keo-vang.jpg"
+    },
+    {
+      "id": "0",
+      "name": "ABC Watch",
+      "price": 1524,
+      "quantity": 15,
+      "categoryId": 1,
+      "image": "https://tse2.mm.bing.net/th/id/OIF.dfdp58t7ledPxGhQ6am5vQ?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3",
+      "categoryName": ""
+    },
+    {
+      "id": "0",
+      "name": "ABC Watch Check",
+      "price": 564,
+      "quantity": 4,
+      "categoryId": 1,
+      "image": "https://tse2.mm.bing.net/th/id/OIF.dfdp58t7ledPxGhQ6am5vQ?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3",
+      "categoryName": ""
     }
   ],
   "cartItems": [
     {
-      "id": "6051",
-      "productId": 3,
-      "quantity": 4,
-      "name": "Apple Fuji Japan",
-      "price": 95000,
-      "image": "https://cdn.abphotos.link/photos/resized/1000x/2023/01/03/1672738109_niRmwzpyUZsaq2o1_1672745887-phpf8313v.png"
+      "id": "ed70",
+      "productId": null,
+      "quantity": 2,
+      "name": "Watch Casio MTP-V002",
+      "price": 850000,
+      "image": "https://product.hstatic.net/1000388227/product/mtp-v002l-7b3udf_02ae2effecb543a5bc701c86d798bbec_master.png"
     },
     {
-      "id": "1821",
-      "productId": 2,
-      "quantity": 5,
+      "id": "dd51",
+      "productId": "2",
+      "quantity": 2,
       "name": "Watch Fossil FS5453",
       "price": 3200000,
       "image": "https://cdn.casio-vietnam.vn/wp-content/uploads/2020/09/MTP-E321RL-2AV.png"
-    },
-    {
-      "id": "5424",
-      "productId": "19",
-      "quantity": 1,
-      "name": "Orange Valencia",
-      "price": 45000,
-      "image": "https://goce.vn/files/product/bfc11ffbfeb768c94fecf48e5f9de188.jpg"
     }
   ],
   "users": [
@@ -257,6 +259,13 @@
       "id": "2",
       "email": "phuc36@gmail.com",
       "username": "phuc36",
+      "password": "123",
+      "role": "user"
+    },
+    {
+      "id": "22c1",
+      "email": "abc@gmail.com",
+      "username": "abc",
       "password": "123",
       "role": "user"
     }

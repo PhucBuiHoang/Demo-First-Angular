@@ -1,21 +1,26 @@
 <header>
   <nav class="flex items-center justify-between p-4 lg:px-8 bg-white shadow-md sticky top-0 z-50">
     <div class="flex flex-1">
-      <a href="/home" class="-m-1.5 p-1.5">
+      <a routerLink="/home" class="-m-1.5 p-1.5">
         <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500" alt="Logo"
           class="h-8 w-auto" />
       </a>
     </div>
     <div class="hidden lg:flex lg:gap-x-10">
-      <a href="/home"
-        class="text-gray-700 text-base font-medium hover:text-indigo-600 transition border-b-2 border-transparent hover:border-indigo-600 pb-1">
+      <div routerLink="/home" routerLinkActive="active-link"
+        class="cursor-pointer text-gray-700 text-base font-medium hover:text-indigo-600 transition border-b-2 border-transparent hover:border-indigo-600 pb-1">
         Products
-      </a>
+      </div>
       @if(isLoggedIn()) {
-      <a href="/cart"
-        class="text-gray-700 text-base font-medium hover:text-indigo-600 transition border-b-2 border-transparent hover:border-indigo-600 pb-1">
+      <div routerLink="/cart" routerLinkActive="active-link"
+        class="cursor-pointer text-gray-700 text-base font-medium hover:text-indigo-600 transition border-b-2 border-transparent hover:border-indigo-600 pb-1">
         Cart
-      </a>
+      </div>
+      }
+      @if(isUserAdmin()) { <div routerLink="/manage-products" routerLinkActive="active-link"
+        class="cursor-pointer text-gray-700 text-base font-medium  hover:text-indigo-600 transition border-b-2 border-transparent hover:border-indigo-600 pb-1">
+        Management
+      </div>
       }
     </div>
     <div class="hidden lg:flex lg:flex-1 lg:justify-end lg:items-center lg:gap-x-4">

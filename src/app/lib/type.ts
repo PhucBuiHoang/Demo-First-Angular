@@ -6,7 +6,9 @@ export interface Product {
     categoryId: number;
     image: string;
 }
-
+export interface ProductWithCategory extends Product {
+    categoryName: string;
+}
 export interface Category {
     id: number;
     name: string;

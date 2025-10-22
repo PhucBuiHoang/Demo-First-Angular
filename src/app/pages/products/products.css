@@ -1,0 +1,21 @@
+.snackbar-success,
+.snackbar-error {
+    --mat-snack-bar-button-color: white;
+
+    .mat-mdc-snack-bar-action {
+        background-color: rgba(white, 0.2);
+    }
+}
+
+.snackbar-success {
+    background-color: #4caf50;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.snackbar-error {
+    --mdc-snackbar-container-color: #f44336;
+}

@@ -20,6 +20,14 @@ export class Service {
     return this.http.post<Product>(`${this.apiUrl}/products`, product);
   }
 
+  updateProduct(id: number, product: Product): Observable<Product> {
+    return this.http.put<Product>(`${this.apiUrl}/products/${id}`, product);
+  }
+
+  removeProduct(id: number | string): Observable<Product> {
+    return this.http.delete<Product>(`${this.apiUrl}/products/${String(id)}`);
+  }
+
   getAllCategory(): Observable<Category[]> {
     return this.http.get<Category[]>(`${this.apiUrl}/categories`)
   }
@@ -44,6 +52,4 @@ export class Service {
   removeCartItem(id: number): Observable<any> {
     return this.http.delete(`${this.apiUrl}/cartItems/${id}`);
   }
-
-
 }

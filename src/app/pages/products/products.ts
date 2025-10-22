@@ -3,8 +3,9 @@ import { Service } from '../../service/service';
 import { CartItem, Category, Product } from '../../lib/type';
 import { AsyncPipe, CommonModule } from '@angular/common';
 import { Observable, Subscription, map } from 'rxjs';
-import { AuthService } from '../../service/auth.service';
-// import { ToastService } from '../../service/toast.service';
+import { AuthService } from '../../service/service.auth';
+import { ProductDetail } from '../product-detail/product-detail';
+// import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-products',
@@ -14,6 +15,10 @@ import { AuthService } from '../../service/auth.service';
   styleUrl: './products.css'
 })
 export class Products implements OnInit {
+  // private toastService = inject(MatSnackBar);
+
+  parentCount = signal(5);
+
   // Option cho *ngFor
   // productList: Product[] = [];
 
@@ -61,11 +66,9 @@ export class Products implements OnInit {
       return;
     }
 
-    const currentUser = JSON.parse(localStorage.getItem('currentUser') || '{}');
-
     this.service.getCartItems().subscribe((cartItems: CartItem[]) => {
       const existingItem = cartItems.find(
-        item => item.productId === product.id && item.id === currentUser.id
+        item => String(item.productId) === String(product.id)
       );
 
       if (existingItem) {
@@ -73,10 +76,15 @@ export class Products implements OnInit {
           quantity: existingItem.quantity + 1
         }).subscribe({
           next: () => {
+            // this.toastService.open('Item has been added to the cart!', 'Close', {
+            //   duration: 5000,
+            //   panelClass: ['snackbar-success']
+            // });
             alert('Item has been added to the cart!');
           },
           error: (err) => {
             console.error('Error when updating cart item:', err);
+            //
             alert('Failed to update cart item. Please try again.');
           }
         });
